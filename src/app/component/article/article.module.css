@@ -9,8 +9,9 @@
 .image {
   width: 100% !important;
   height: 200px !important;
-  object-fit: cover;
-  @apply rounded-t-md;
+  object-fit: contain;
+  color: white !important;
+  @apply rounded-t-md p-12 bg-blue-500 !text-white !fill-current;
 }
 
 .content {

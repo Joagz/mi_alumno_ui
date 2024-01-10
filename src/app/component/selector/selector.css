@@ -17,10 +17,8 @@
 @keyframes appear {
   from {
     transform: rotateY(90deg);
-    opacity: 0;
   }
   to {
     transform: rotateY(0deg);
-    opacity: 1;
   }
 }
