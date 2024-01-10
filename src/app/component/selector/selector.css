@@ -1,0 +1,26 @@
+.selector {
+  user-select: none;
+  z-index: 1000;
+  @apply text-black hover:text-blue-800 flex-col font-medium rounded-xl relative p-2 px-4 hover:bg-slate-100 cursor-pointer flex justify-center items-center hover:border-blue-500;
+}
+
+.selector-item {
+  user-select: none;
+  @apply text-black hover:text-blue-800 p-1 px-4 font-light flex-1 hover:bg-slate-200 cursor-pointer flex justify-start items-center transition-all;
+}
+
+.selector-items {
+  z-index: 500;
+  animation: appear 0.4s ease;
+}
+
+@keyframes appear {
+  from {
+    transform: rotateY(90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
