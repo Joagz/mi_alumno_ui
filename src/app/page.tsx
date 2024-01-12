@@ -1,13 +1,8 @@
-import styles from "./page.module.css";
-import {
-  Article,
-  ContentListItem,
-  Header,
-  ListContainer,
-  Nav,
-  Section,
-} from "./component/";
-import { FeaturedLink, FeaturedLinkContainer } from "./component/featured-link";
+"use client";
+
+import styles                                   from "./page.module.css";
+import { Article, Header, Nav, Section }        from "component/";
+import { FeaturedLink, FeaturedLinkContainer }  from "component/featured-link";
 
 export default function Home() {
   return (
@@ -15,16 +10,16 @@ export default function Home() {
       <Nav />
       <Header />
       <FeaturedLinkContainer>
-        <FeaturedLink url='/destacado' image='/argentina.svg'>
+        <FeaturedLink url='/provincias' image='/argentina.svg'>
           Provincias
         </FeaturedLink>
-        <FeaturedLink url='/destacado' image='/acerca.svg'>
+        <FeaturedLink url='/acerca-de' image='/acerca.svg'>
           Sobre Nosotros
         </FeaturedLink>
-        <FeaturedLink url='/destacado' image='/escuela.svg'>
+        <FeaturedLink url='/escuelas/registrar' image='/escuela.svg'>
           Registrar una institución
         </FeaturedLink>
-        <FeaturedLink url='/destacado' image='/alumno.svg'>
+        <FeaturedLink url='/ayuda/ingreso' image='/alumno.svg'>
           Cómo Ingresar a una institución
         </FeaturedLink>
       </FeaturedLinkContainer>

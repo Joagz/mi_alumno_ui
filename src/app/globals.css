@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700&display=swap");
 
 :root {
   --header-size: 500px;
@@ -37,17 +38,23 @@ a {
 
 .button-secondary {
   user-select: none;
-  @apply bg-slate-50 border-2 rounded-full hover:bg-slate-100 hover:border-blue-500 hover:text-black;
+  @apply bg-slate-50 border rounded-full hover:bg-slate-100 hover:border-blue-500 hover:text-black border-slate-400;
 }
-
+h1 {
+  @apply !text-slate-900;
+}
 h2 {
-  @apply text-2xl font-bold;
+  @apply text-2xl font-bold !text-slate-900;
 }
 
 h3 {
-  @apply text-xl font-bold;
+  @apply text-xl font-bold !text-slate-900;
 }
 
-img{
+p {
+  @apply !text-slate-800;
+}
+
+img {
   user-select: none;
 }

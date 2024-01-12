@@ -1,0 +1,20 @@
+.main {
+  @apply w-full flex flex-row;
+}
+
+.division {
+  @apply flex-1 flex justify-center items-center h-screen flex-col relative p-4;
+}
+
+.nav {
+  @apply flex w-full justify-between p-4 items-center absolute left-0 top-0 bg-white z-[1000];
+}
+
+.image {
+  z-index: -500;
+  @apply bg-black;
+}
+
+.loginCard {
+  @apply p-5 border rounded-md bg-white shadow-sm transition-all z-[1000];
+}
