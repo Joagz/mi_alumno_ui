@@ -12,10 +12,6 @@
   @apply justify-center;
 }
 
-.nav {
-  @apply flex w-full justify-between p-4 items-center;
-}
-
 .image {
   z-index: -500;
   @apply bg-black;

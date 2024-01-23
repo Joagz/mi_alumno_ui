@@ -1,8 +1,0 @@
-
-.text {
-  @apply text-lg font-medium text-center;
-}
-
-.container {
-  @apply w-full flex justify-center items-start gap-10 py-8 flex-wrap bg-slate-100;
-}

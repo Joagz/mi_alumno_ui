@@ -1,23 +1,22 @@
 "use client";
 
-import { Link } from "component";
 import styles from "./register.module.css";
 import { Google, LoginRounded } from "@mui/icons-material";
-import { SideDivision } from "./components/SideDivision";
+import { Nav, SideDivision } from "components";
 
 export default function Login() {
   return (
     <main className={styles.main}>
       <div className={styles.division}>
-        <nav className={styles.nav}>
-          <p className='font-bold text-slate-800'>MiAlumno.com</p>
-
-          <div className='flex gap-1'>
-            <Link href='/'>Inicio</Link>
-            <Link href='/login'>Ingresar</Link>
-            <Link href='/ayuda'>Ayuda</Link>
-          </div>
-        </nav>
+        <div className={styles.navContainer}>
+          <Nav
+            overrideLinks={[
+              { name: "Inicio", url: "/" },
+              { name: "Registrarse", url: "/register" },
+              { name: "Ayuda", url: "/ayuda" },
+            ]}
+          />
+        </div>
 
         <div className={styles.loginCard}>
           <div className='flex gap-2 items-start flex-col justify-center flex-1'>
@@ -31,7 +30,7 @@ export default function Login() {
               <Google></Google> <span>Vincular con Google</span>
             </a>
           </div>
-          <br /> 
+          <br />
 
           <div className='flex flex-col gap-4'>
             <form className='flex flex-col gap-3'>

@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Encode_Sans } from "next/font/google";
 import "../globals.css";
-import { Link } from "component";
-import styles from "./login.module.css";
+import { Nav } from "components";
 
 const encode_sans = Encode_Sans({ subsets: ["latin"] });
 
@@ -17,18 +16,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='es_AR'>
+    <html lang='es'>
       <body className={encode_sans.className}>
-        {" "}
-        <nav className={styles.nav}>
-          <p className='font-bold text-slate-800'>MiAlumno.com</p>
-
-          <div className='flex gap-1'>
-            <Link href='/'>Inicio</Link>
-            <Link href='/register'>Registrarse</Link>
-            <Link href='/ayuda'>Ayuda</Link>
-          </div>
-        </nav>
+        <Nav
+          overrideLinks={[
+            { name: "Inicio", url: "/" },
+            { name: "Registrarse", url: "/register" },
+            { name: "Ayuda", url: "/ayuda" },
+          ]}
+        />
         {children}
       </body>
     </html>

@@ -1,12 +1,11 @@
 "use client";
 
-import styles                                   from "./page.module.css";
-import { Article, Header, Nav, Section }        from "component/";
-import { FeaturedLink, FeaturedLinkContainer }  from "component/featured-link";
+import { Article, Header, Nav, Section } from "components/";
+import { FeaturedLink, FeaturedLinkContainer } from "components/featured-link";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main>
       <Nav />
       <Header />
       <FeaturedLinkContainer>
@@ -26,9 +25,9 @@ export default function Home() {
       <div className='px-4 w-full flex flex-col justify-center items-center my-24'>
         <div className='xl:w-[60%] lg:w-3/4 md:w-3/2 w-full flex flex-col gap-24'>
           <div className='flex flex-col gap-2'>
-            <h1 className='text-2xl font-bold'>
+            <h2 className='text-2xl font-bold'>
               Misión Institucional de MiAlumno.com
-            </h1>
+            </h2>
             <p className='text-lg'>
               En nuestra búsqueda por fortalecer la interconexión educativa,
               MiAlumno.com se dedica a ofrecer a las instituciones educativas
@@ -40,30 +39,7 @@ export default function Home() {
               educativo.
             </p>
           </div>
-          {/* <ListContainer>
-            <ContentListItem
-              content='MiAlumno.com facilita el proceso de registro para las
-                  escuelas, permitiéndoles crear perfiles específicos que se
-                  adaptan a las necesidades de su comunidad educativa.'
-              title='Registro y Perfiles Específicos:'
-              icon='perfil.svg'
-            />
-            <ContentListItem
-              content='Facilitamos la comunicación interna entre los diversos actores
-                educativos, brindando herramientas para compartir información de
-                manera eficiente y colaborativa.'
-              title='Comunicación Eficiente:'
-              icon='comunicacion.svg'
-            />
-            <ContentListItem
-              content='Ofrecemos una plataforma diseñada para que las instituciones
-                carguen y gestionen internamente sus propios recursos
-                educativos, fomentando la autonomía y la personalización del
-                contenido para los alumnos.'
-              title='Gestión de Contenidos Internos:'
-              icon='gestion.svg'
-            />
-          </ListContainer> */}
+
           <div>
             {" "}
             <h2 className='text-2xl font-bold'>Servicios Destacados:</h2>
@@ -92,7 +68,7 @@ export default function Home() {
             </Section>
           </div>
           <div>
-            <h4 className='text-xl font-bold'>Incribir una institución</h4>
+            <h3 className='text-2xl font-bold'>Incribir una institución</h3>
             <p>
               Nuestro compromiso radica en garantizar un proceso de inscripción
               sin complicaciones, facilitando la integración exitosa de su
@@ -100,11 +76,11 @@ export default function Home() {
             </p>
             <p>
               Diseñamos una página que detalla paso a paso{" "}
-              <a href='/registrar-una-escuela'>
+              <a href='/registrar-una-escuela' className="font-bold">
                 cómo registrar una institución
               </a>
               , también puedes ver una lista de las{" "}
-              <a href='/padron-escolar'>instituciones presentes en el padrón</a>{" "}
+              <a href='/padron-escolar' className="font-bold">instituciones presentes en el padrón</a>{" "}
               para comprobar si su escuela está presente.
             </p>
           </div>

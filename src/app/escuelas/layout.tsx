@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Encode_Sans } from "next/font/google";
 import "../globals.css";
-import { Filterbar } from "./components/Filterbar";
 
 const encode_sans = Encode_Sans({ subsets: ["latin"] });
 
@@ -10,25 +9,16 @@ export const metadata: Metadata = {
   description: "Listado de instituciones escolares en Mi Alumno.",
 };
 
-export default function RootLayout({
-  listado,
+export default function IdLayout({
   children,
 }: {
-  listado: React.ReactNode;
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
+    <html lang='es'>
       <body className={encode_sans.className}>
-        {children}
-        <div className='flex justify-center items-center'>
-          <div className='flex lg:w-3/4 xl:w-2/3 w-full justify-center items-start relative md:flex-row flex-col'>
-            <Filterbar></Filterbar>
-            <div className='flex-[2]'>{listado}</div>
-          </div>
-        </div>
+        {children}    
       </body>
     </html>
   );
 }
-

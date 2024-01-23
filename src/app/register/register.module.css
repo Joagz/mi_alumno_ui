@@ -6,7 +6,7 @@
   @apply flex-1 flex justify-center items-center h-screen flex-col relative p-4;
 }
 
-.nav {
+.navContainer {
   @apply flex w-full justify-between p-4 items-center absolute left-0 top-0 bg-white z-[1000];
 }
 

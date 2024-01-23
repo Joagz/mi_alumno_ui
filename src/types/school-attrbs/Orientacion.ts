@@ -1,0 +1,16 @@
+export enum Orientacion {
+    "Ciencias Sociales y Humanidades",
+    "Ciencias Naturales",
+    "Electromecánica",
+    "Industrial",
+    "Educación",
+    "Economía y Administración",
+    "Comunicación",
+    "Robótica y Programación",
+    "Agro y Ambiente",
+    "Informática",
+    "Lenguas",
+    "Energía y Sustentabilidad",
+    "Matemática y Física",
+    "Artes",
+}

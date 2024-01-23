@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Iniciar Sesión",
+    "url": "/login"
+  },
+  {
+    "name": "Escuelas",
+    "url": "/lista-escuelas",
+    "sublinks": [
+      {
+        "name": "Estatales",
+        "url": "/lista-escuelas?sector=estatal"
+      },
+      {
+        "name": "Privadas",
+        "url": "/lista-escuelas?sector=privado"
+      },
+      {
+        "name": "Urbanas",
+        "url": "/lista-escuelas?ambito=urbana"
+      },
+      {
+        "name": "Rurales",
+        "url": "/lista-escuelas?ambito=rural"
+      }
+    ]
+  }
+]

@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Mi Alumno",
   description:
     "Mi Alumno es un sitio web donde las escuelas y los alumnos pueden compartir información.",
+    
 };
 
 export default function RootLayout({
@@ -16,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='es_AR'>
+    <html lang='es'>
       <body className={encode_sans.className}>{children}</body>
     </html>
   );
