@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: "Listado de instituciones escolares en Mi Alumno.",
 };
 
-export default function IdLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -17,7 +17,8 @@ export default function IdLayout({
   return (
     <html lang='es'>
       <body className={encode_sans.className}>
-        {children}    
+        {children}
+       
       </body>
     </html>
   );

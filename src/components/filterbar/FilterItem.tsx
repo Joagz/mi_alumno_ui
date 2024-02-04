@@ -16,12 +16,6 @@ export const FilterItem = ({ title, items }: Props) => {
   const pathName = usePathname();
   const { replace } = useRouter();
 
-  useEffect(() => {
-    if (window.innerWidth >= 768) {
-      list.current!.style.display = "flex";
-    }
-  }, []);
-
   const onclick = () => {
     if (!show) list.current!.style.display = "none";
     else list.current!.style.display = "flex";
@@ -35,7 +29,7 @@ export const FilterItem = ({ title, items }: Props) => {
         className='transition-all rounded-sm hover:bg-blue-50 p-2 text-2xl font-semibold text-stone-600 cursor-pointer justify-start items-center flex gap-2'
         onClick={onclick}
       >
-        <span className='flex-1'>{title}</span>
+        <span className='flex-1 text-xl'>{title}</span>
         <span
           className={`transition-all flex justify-center items-center ${
             show ? "rotate-90 " : "-rotate-90 "

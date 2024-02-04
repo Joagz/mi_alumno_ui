@@ -1,6 +1,6 @@
 import categorias from "json/categorias.json";
 import { FilterItem } from "./FilterItem";
-import { ProvinciasService } from "api/provincias";
+import { ProvinciasService } from "services/provincias";
 
 export async function Filterbar() {
   const provincias = await ProvinciasService.getProvincias();

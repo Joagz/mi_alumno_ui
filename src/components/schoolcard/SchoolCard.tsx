@@ -1,5 +1,6 @@
-import Link from "next/link";
+"use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 type Props = {
   slug: string;
@@ -10,9 +11,14 @@ type Props = {
 };
 
 export function SchoolCard({ slug, title, content, image, location }: Props) {
+  const { push } = useRouter();
   return (
-    <Link href={`/escuelas/${slug}`}>
-      <div className='min-h-[150px] max-h-[250px] justify-between items-center gap-4 cursor-pointer group w-full flex border rounded-md hover:border-r-sky-500 border-r-8 p-4 transition-all'>
+    <div
+      onClick={() =>
+        push(`/escuelas?show_card=true&card_id=${slug.substring(1)}`)
+      }
+    >
+      <div className='min-h-[150px] max-h-[500px] justify-between items-center gap-4 cursor-pointer group w-full flex border rounded-md hover:border-r-sky-500 border-r-8 p-4 transition-all'>
         <div className='flex flex-col'>
           <span className='md:text-2xl text-xl font-bold text-slate-600 group-hover:text-sky-500 transition-all'>
             {title}
@@ -33,6 +39,6 @@ export function SchoolCard({ slug, title, content, image, location }: Props) {
           ></Image>
         )}
       </div>
-    </Link>
+    </div>
   );
 }

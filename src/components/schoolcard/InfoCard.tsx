@@ -18,20 +18,24 @@ type Props = {
 export const InfoCard = (props: Props) => {
   const { ciudad, provincia } = props.ubicacion;
   return (
-    <ul className='font-medium rounded-sm gap-2 justify-between flex items-start w-full md:flex-row flex-col'>
-      <li className='flex justify-start items-start gap-1'>
+    <ul className='font-medium rounded-sm gap-2 justify-between flex items-start w-full md:flex-row flex-col '>
+      <li className='text-xs flex justify-start items-center gap-1'>
         <SchoolOutlined />
-        {Object.values(Orientacion)[props.orientacion]}
+        <span>{Object.values(Orientacion)[props.orientacion]}</span>
       </li>
-      <li className='flex justify-start items-start gap-1'>
-        <ShieldOutlined /> {Object.values(Sector)[props.sector]}
+      <li className='text-xs flex justify-start items-center gap-1'>
+        <ShieldOutlined />
+        <span> {Object.values(Sector)[props.sector]}</span>
       </li>
-      <li className='flex justify-start items-start gap-1'>
-        <LocationCityOutlined /> {Object.values(Ambito)[props.ambito]}
+      <li className='text-xs flex justify-start items-center gap-1'>
+        <LocationCityOutlined />
+        <span> {Object.values(Ambito)[props.ambito]}</span>
       </li>
-      <li className='flex justify-start items-start gap-1'>
+      <li className='text-xs flex justify-start items-center gap-1'>
         <PinDropOutlined />
-        {`${ciudad}, ${Object.values(Provincias)[provincia]}, Argentina`}
+        <span>
+          {`${ciudad}, ${Object.values(Provincias)[provincia]}, Argentina`}
+        </span>
       </li>
     </ul>
   );

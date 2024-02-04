@@ -5,23 +5,23 @@
   },
   {
     "name": "Escuelas",
-    "url": "/lista-escuelas",
+    "url": "/escuelas",
     "sublinks": [
       {
         "name": "Estatales",
-        "url": "/lista-escuelas?sector=estatal"
+        "url": "/escuelas?sector=estatal"
       },
       {
         "name": "Privadas",
-        "url": "/lista-escuelas?sector=privado"
+        "url": "/escuelas?sector=privado"
       },
       {
         "name": "Urbanas",
-        "url": "/lista-escuelas?ambito=urbana"
+        "url": "/escuelas?ambito=urbana"
       },
       {
         "name": "Rurales",
-        "url": "/lista-escuelas?ambito=rural"
+        "url": "/escuelas?ambito=rural"
       }
     ]
   }
