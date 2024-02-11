@@ -4,9 +4,9 @@ import gsap from "gsap";
 import Image from "next/image";
 import { FC, useRef } from "react";
 
-import edu1 from "../../../public/img/edu-2.jpg";
+import edu1 from "../../../public/img/edu-1.jpg";
 import edu2 from "../../../public/img/edu-2.jpg";
-import edu3 from "../../../public/img/edu-2.jpg";
+import edu3 from "../../../public/img/edu-3.jpg";
 
 const duration = 3;
 const delay = 10;

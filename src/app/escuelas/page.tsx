@@ -1,5 +1,6 @@
 import { SearchRounded } from "@mui/icons-material";
-import { Filterbar, Listado, Nav } from "components";
+import { Filterbar, Listado, Nav, SearchParamsShow } from "components";
+
 type Props = {
   searchParams: {
     orientacion?: string;
@@ -11,6 +12,7 @@ type Props = {
     card_id?: string;
   };
 };
+
 function Page({
   searchParams: {
     ambito,
@@ -43,20 +45,28 @@ function Page({
             </button>
           </div>
         </form>
-      </div>{" "}
+      </div>
       <div className='flex justify-center items-center'>
         <div className='flex lg:w-3/4 xl:w-2/3 w-full justify-center items-center md:items-start relative md:flex-row flex-col'>
           <Filterbar></Filterbar>
           <div className='flex-[2]'>
-            <Listado
-              orientacion={undefined}
-              sector={undefined}
-              ambito={undefined}
-              jurisdiccion={undefined}
-              page={0}
-              card_id={card_id}
-              show_card={show_card}
-            ></Listado>
+            <div className='flex-1 p-8 px-4 flex flex-col gap-6 '>
+              <SearchParamsShow
+                jurisdiccion={jurisdiccion}
+                ambito={ambito}
+                orientacion={orientacion}
+                sector={sector}
+              />
+              <Listado
+                orientacion={undefined}
+                sector={undefined}
+                ambito={undefined}
+                jurisdiccion={undefined}
+                page={0}
+                card_id={card_id}
+                show_card={show_card}
+              ></Listado>
+            </div>
           </div>
         </div>
       </div>
